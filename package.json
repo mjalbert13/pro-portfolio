@@ -1,0 +1,30 @@
+{
+  "name": "pro-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjalbert13/pro-portfolio.git"
+  },
+  "author": "mattJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjalbert13/pro-portfolio/issues"
+  },
+  "homepage": "https://github.com/mjalbert13/pro-portfolio#readme"
+}
